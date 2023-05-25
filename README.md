@@ -5,4 +5,4 @@
 ![main_screen](./images/ui/main_screen.png)
 
 ## Our Consept
-![main_screen_finish](./images/ui/main_screen_finish.png)
+![main_screen_finish](./images/ui/main_screen_finish.PNG)
