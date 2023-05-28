@@ -1,3 +1,5 @@
+import os
+
 import flet as ft
 
 import ui.homeView.home_view as homeView
@@ -9,4 +11,4 @@ def main(page: ft.Page):
     homeView.HomeView(page).baseView()
 
 
-ft.app(target=main, assets_dir="assets")
+ft.app(target=main, port=os.getenv("PORT"), assets_dir="assets")
