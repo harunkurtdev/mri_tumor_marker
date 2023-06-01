@@ -2,13 +2,8 @@
 import flet as ft
 import core.models.model as model
 
-import base64
 import cv2
 import numpy as np
-# import matplotlib
-# matplotlib.use('Agg')
-# import matplotlib.pyplot as plt
-# from flet.matplotlib_chart import MatplotlibChart
 
 
 class HomeViewModel(model.Proccess4Draw):
