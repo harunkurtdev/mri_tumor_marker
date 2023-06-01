@@ -20,15 +20,7 @@ class HomeViewModel(model.Proccess4Draw):
         self.img: cv2.Mat
         self.slider_value = 100
 
-        # baseFig, self.baseAX = plt.subplots()
-        # self.baseAX.set_title(label="Orijinal Resim")
-        # self.baseAX.set_xlabel("Yoğunluk Değeri")
-        # self.baseAX.set_ylabel("Piksel Sayısı")
-        # processFig, self.processAX = plt.subplots()
-        # self.processAX.set_title(label="İşlenmiş Resim")
-        # self.processAX.set_xlabel("Yoğunluk Değeri")
-        # self.processAX.set_ylabel("Piksel Sayısı")
-
+  
         # -------------
         self.pick_files_dialog = ft.FilePicker(
             on_result=self.pick_files_result)
