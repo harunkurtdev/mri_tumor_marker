@@ -1,4 +1,0 @@
-flet==0.7.4
-numpy
-tqdm
-opencv_python
