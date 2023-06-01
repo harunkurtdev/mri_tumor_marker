@@ -1,5 +1,5 @@
 flet==0.7.4
-matplotlib==3.7.1
-numpy==1.23.2
-opencv_python==4.6.0.66
-tqdm==4.64.1
+numpy
+tqdm
+opencv_python
+matplotlib

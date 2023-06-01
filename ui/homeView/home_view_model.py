@@ -5,10 +5,10 @@ import core.models.model as model
 import base64
 import cv2
 import numpy as np
-import matplotlib
+# import matplotlib
 # matplotlib.use('Agg')
-import matplotlib.pyplot as plt
-from flet.matplotlib_chart import MatplotlibChart
+# import matplotlib.pyplot as plt
+# from flet.matplotlib_chart import MatplotlibChart
 
 
 class HomeViewModel(model.Proccess4Draw):
@@ -20,21 +20,21 @@ class HomeViewModel(model.Proccess4Draw):
         self.img: cv2.Mat
         self.slider_value = 100
 
-        baseFig, self.baseAX = plt.subplots()
-        self.baseAX.set_title(label="Orijinal Resim")
-        self.baseAX.set_xlabel("Yoğunluk Değeri")
-        self.baseAX.set_ylabel("Piksel Sayısı")
-        processFig, self.processAX = plt.subplots()
-        self.processAX.set_title(label="İşlenmiş Resim")
-        self.processAX.set_xlabel("Yoğunluk Değeri")
-        self.processAX.set_ylabel("Piksel Sayısı")
+        # baseFig, self.baseAX = plt.subplots()
+        # self.baseAX.set_title(label="Orijinal Resim")
+        # self.baseAX.set_xlabel("Yoğunluk Değeri")
+        # self.baseAX.set_ylabel("Piksel Sayısı")
+        # processFig, self.processAX = plt.subplots()
+        # self.processAX.set_title(label="İşlenmiş Resim")
+        # self.processAX.set_xlabel("Yoğunluk Değeri")
+        # self.processAX.set_ylabel("Piksel Sayısı")
 
         # -------------
         self.pick_files_dialog = ft.FilePicker(
             on_result=self.pick_files_result)
         self.page.overlay.append(self.pick_files_dialog)
         # -------------
-        self.baseChart = MatplotlibChart(baseFig, expand=True)
+        # self.baseChart = MatplotlibChart(baseFig, expand=True)
         self.baseImage = ft.Image(
             fit=ft.ImageFit.CONTAIN)
         self.baseImage.src_base64 = imageBase64
@@ -42,7 +42,7 @@ class HomeViewModel(model.Proccess4Draw):
         self.processImage = ft.Image(
             fit=ft.ImageFit.CONTAIN)
         self.processImage.src_base64 = imageBase64
-        self.processChart = MatplotlibChart(processFig, expand=True)
+        # self.processChart = MatplotlibChart(processFig, expand=True)
         # ----------
         self.t = ft.Text()
         self.z = ft.Text()
@@ -73,10 +73,10 @@ class HomeViewModel(model.Proccess4Draw):
         hist_original, bins_original = np.histogram(
             processimg.flatten(), 256, [0, 256])
 
-        self.processAX.plot(hist_original, color='b')
+        # self.processAX.plot(hist_original, color='b')
 
         self.processImage.update()
-        self.processChart.update()
+        # self.processChart.update()
         self.page.update()
 
     def on_pan_update1(self, e: ft.DragStartEvent):
@@ -113,10 +113,10 @@ class HomeViewModel(model.Proccess4Draw):
         hist_original, bins_original = np.histogram(
             self.img.flatten(), 256, [0, 256])
 
-        self.baseAX.plot(hist_original, color='b')
+        # self.baseAX.plot(hist_original, color='b')
 
         self.baseImage.update()
-        self.baseChart.update()
+        # self.baseChart.update()
 
     def resizedImage(self, img) -> cv2.Mat:
         scale_percent = 45  # percent of original size

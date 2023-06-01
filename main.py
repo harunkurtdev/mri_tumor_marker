@@ -1,7 +1,7 @@
 import os
 
 import flet as ft
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 import ui.homeView.home_view as homeView
 
@@ -12,5 +12,5 @@ def main(page: ft.Page):
     homeView.HomeView(page).baseView()
 
 
-load_dotenv()
-ft.app(target=main, port=os.getenv("PORT"), assets_dir="assets")
+# load_dotenv()
+ft.app(target=main, assets_dir="assets")

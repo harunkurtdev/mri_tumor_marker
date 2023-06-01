@@ -18,10 +18,10 @@ class HomeView(homemodel.HomeViewModel):
 
                         [
                             self.baseImage,
-                            ft.Container(
-                                self.baseChart,
-                                width=self.page.width*25/100
-                            ),
+                            # ft.Container(
+                            #     self.baseChart,
+                            #     width=self.page.width*25/100
+                            # ),
                             button.ProjectButton(
                                 text="Update Image", color=ft.colors.RED, on_click=lambda _: self.pick_files_dialog.pick_files(
                                     allow_multiple=True
@@ -47,10 +47,10 @@ class HomeView(homemodel.HomeViewModel):
                                 drag_interval=10,
                                 on_vertical_drag_start=self.on_pan_update1,
                                 content=self.processImage),
-                            ft.Container(
-                                self.processChart,
-                                width=self.page.width*25/100
-                            ),
+                            # ft.Container(
+                            #     self.processChart,
+                            #     width=self.page.width*25/100
+                            # ),
                             button.ProjectButton(
                                 text="Proccesing Image", color=ft.colors.RED, on_click=self.process),
                         ],
